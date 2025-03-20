@@ -3,42 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Webseite</title>
-    <style> 
+    <title>Mercedes S63/65 AMG Coupé C217</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
+            background-color: #f4f4f4;
         }
         header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
+            background: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
-        main {
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: white;
             padding: 20px;
         }
-        button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ddd;
+            border-radius: 5px;
         }
-        button:hover {
-            background-color: #0056b3;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Willkommen auf meiner Webseite</h1>
+        <h1>Mercedes S63/65 AMG Coupé C217</h1>
     </header>
-    <main>
-        <p>Dies ist eine einfache Webseite mit grundlegenden Funktionen.</p>
-        <button onclick="alert('Hallo! Willkommen auf meiner Webseite!')">Klick mich</button>
-    </main>
+    <div class="container">
+        <section class="section">
+            <h2>Willkommen</h2>
+            <p>Erfahren Sie mehr über das luxuriöse Mercedes S63/65 AMG Coupé C217, seine leistungsstarken Motoren und umfangreichen Konfigurationsmöglichkeiten.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Mercedes S63/65 AMG Coupé">
+        </section>
+        <section class="section">
+            <h2>Motorenvielfalt</h2>
+            <p>Das Mercedes-AMG Coupé bietet beeindruckende Leistung mit seinen kraftvollen V8- und V12-Motoren.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Motor des AMG Coupés">
+        </section>
+        <section class="section">
+            <h2>Konfigurationsmöglichkeiten</h2>
+            <p>Gestalten Sie Ihr individuelles Traumfahrzeug mit einer breiten Auswahl an Farben, Innenausstattungen und Sonderausstattungen.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Konfigurationsoptionen">
+        </section>
+    </div>
 </body>
 </html>
