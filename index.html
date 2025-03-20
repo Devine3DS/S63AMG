@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hier finden Sie Informationen über das S63/65 AMG Coupé C217" />
-    <meta name="keywords" content="Mercedes, AMG, S-Coupe" />
-    <meta name="author" content="Jan Bruder" />
-    <meta name="publisher" content="Jan Bruder" />
+    <meta name="description" content="Hier finden Sie Informationen über das S63/65 AMG Coupé C217">
+    <meta name="keywords" content="Mercedes, AMG, S-Coupe">
+    <meta name="author" content="Jan Bruder">
+    <meta name="publisher" content="Jan Bruder">
 
     <title>Mercedes S63/65 AMG Coupé C217</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Didot', sans-serif;
             margin: 0;
             padding: 0;
             color: #fff;
@@ -30,38 +30,32 @@
         }
         .landing h1 {
             position: absolute;
-            top: 10%;
+            top: 12%;
             font-size: 3rem;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px 25px;
-            border-radius: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 10px;
+            letter-spacing: 1.5px;
         }
         .nav {
             position: absolute;
             top: 35%;
             transform: translateY(-50%);
             display: flex;
-            gap: 15px;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 10px 20px;
-            border-radius: 8px;
+            gap: 30px;
         }
         .nav button {
-            background: none;
-            color: #f39c12;
-            border: 2px solid #f39c12;
-            padding: 12px 25px;
-            font-size: 1.1rem;
+            background: #d35400;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.3rem;
             border-radius: 5px;
             cursor: pointer;
-            transition: 0.3s;
-            text-transform: uppercase;
+            transition: background 0.3s ease-in-out;
         }
         .nav button:hover {
-            background: #f39c12;
-            color: #fff;
+            background: #e74c3c;
         }
         .container {
             width: 85%;
@@ -69,40 +63,40 @@
             padding: 50px 0;
         }
         .section {
-            margin: 70px 0;
+            margin: 80px 0;
             padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-            scroll-margin-top: 100px;
+            background: rgba(40, 40, 40, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out;
+            scroll-margin-top: 90px;
+        }
+        .section:hover {
+            transform: scale(1.03);
         }
         .motoren-grid {
             display: flex;
+            gap: 25px;
             justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
         }
         .motoren-item {
             flex: 1;
             text-align: center;
-            max-width: 400px;
         }
         .motoren-item img {
-            width: 100%;
+            width: 90%;
             height: auto;
-            border-radius: 12px;
+            max-width: 450px;
+            border-radius: 10px;
         }
         h2 {
-            border-bottom: 3px solid #f39c12;
+            border-bottom: 3px solid #d35400;
             padding-bottom: 12px;
-            color: #f39c12;
-            font-size: 2rem;
-            text-transform: uppercase;
+            color: #d35400;
         }
         p {
             line-height: 1.8;
             font-size: 1.2rem;
-            color: #ddd;
         }
         html {
             scroll-behavior: smooth;
@@ -115,14 +109,14 @@
         <div class="nav">
             <button onclick="location.href='#willkommen'">Willkommen</button>
             <button onclick="location.href='#motoren'">Motoren</button>
-            <button onclick="location.href='#konfiguration'">Konfiguration</button>
+            <button onclick="location.href='#ihr-amg-coupe'">Ihr AMG Coupé</button>
         </div>
     </div>
     <div class="container">
         <section id="willkommen" class="section">
             <h2>Willkommen</h2>
-            <p>Erfahren Sie mehr über das luxuriöse Mercedes S63/65 AMG Coupé C217, seine leistungsstarken Motoren und umfangreichen Konfigurationsmöglichkeiten.</p>
-            <img src="S63.jpg" alt="Mercedes S63/65 AMG Coupé" width="100%">
+            <p>Erfahren Sie mehr über das luxuriöse Mercedes S63/65 AMG Coupé C217, seine leistungsstarken Motoren und umfangreichen Möglichkeiten zur Individualisierung.</p>
+            <img src="S63.jpg" alt="Mercedes S63/65 AMG Coupé" width="1280" height="720">
         </section>
         <section id="motoren" class="section">
             <h2>Motorenvielfalt</h2>
@@ -138,10 +132,10 @@
                 </div>
             </div>
         </section>
-        <section id="konfiguration" class="section">
-            <h2>Konfigurationsmöglichkeiten</h2>
+        <section id="ihr-amg-coupe" class="section">
+            <h2>Ihr AMG Coupé</h2>
             <p>Gestalten Sie Ihr individuelles Traumfahrzeug mit einer breiten Auswahl an Farben, Innenausstattungen und Sonderausstattungen.</p>
-            <img src="https://via.placeholder.com/800x400" alt="Konfigurationsoptionen" width="100%">
+            <img src="https://via.placeholder.com/800x400" alt="Personalisierung Ihres AMG Coupés">
         </section>
     </div>
 </body>
