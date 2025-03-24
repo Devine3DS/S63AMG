@@ -1,0 +1,27 @@
+<script>
+  document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape" || e.key === "Backspace") {
+      // Speichern der aktuellen Scroll-Position, bevor der Hash entfernt wird
+      const scrollPosition = window.scrollY;
+
+      // Verhindert das Zurücksetzen der Seite auf den Anfang und entfernt nur den Hash
+      history.replaceState(null, null, window.location.pathname);
+
+      // Schließe die Lightbox
+      window.location.hash = "";
+
+      // Setze die Scroll-Position nach dem Entfernen des Hashes zurück
+      window.scrollTo(0, scrollPosition);
+    }
+  });
+
+  // Verhindert das Scrollen der Seite beim Schließen der Lightbox
+  window.addEventListener("hashchange", function(event) {
+    // Verhindert das automatische Scrollen der Seite auf den Anfang
+    event.preventDefault();
+    var target = document.querySelector(window.location.hash);
+    if (target) {
+      window.scrollTo(0, target.offsetTop);
+    }
+  });
+</script>
