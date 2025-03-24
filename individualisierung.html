@@ -134,34 +134,9 @@
 </head>
 <body>
 <script>
-  // Setze scrollRestoration auf "manual", um das automatische Scrollen zu verhindern
-  if (history.scrollRestoration) {
-    history.scrollRestoration = "manual";
-  }
-
   document.addEventListener('keydown', function(e) {
     if (e.key === "Escape" || e.key === "Backspace") {
-      // Speichern der aktuellen Scroll-Position
-      const scrollPosition = window.scrollY;
-
-      // Entferne den Hash ohne die Seite neu zu laden oder die Position zu verändern
-      history.replaceState(null, null, window.location.pathname);
-
-      // Schließe die Lightbox
-      window.location.hash = "";
-
-      // Setze die Scroll-Position nach dem Entfernen des Hashes zurück
-      window.scrollTo(0, scrollPosition);
-    }
-  });
-
-  // Verhindere das Scrollen der Seite beim Schließen der Lightbox
-  window.addEventListener("hashchange", function(event) {
-    // Verhindert das automatische Scrollen der Seite auf den Anfang
-    event.preventDefault();
-    var target = document.querySelector(window.location.hash);
-    if (target) {
-      window.scrollTo(0, target.offsetTop);
+      history.replaceState(null, null, ' ');
     }
   });
 </script>
@@ -179,62 +154,21 @@
     </p>
   </section>
 
-  <section class="section">
-    <h2>Exklusive Lackfarben</h2>
-    <div class="grid">
-      <div class="grid-item">
-        <a href="#lack1"><img src="lackfarbe1.jpg" alt="Individuelle Lackfarbe 1"></a>
-        <p>Einzigartige Metallic- und Mattlackierungen für einen unverwechselbaren Look.</p>
-      </div>
-      <div class="grid-item">
-        <a href="#lack2"><img src="lackfarbe2.jpg" alt="Individuelle Lackfarbe 2"></a>
-        <p>Hochwertige Farbtöne, die perfekt zur AMG-Performance passen.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Felgendesigns</h2>
-    <div class="grid">
-      <div class="grid-item">
-        <a href="#felge1"><img src="felge1.jpg" alt="Felgendesign 1"></a>
-        <p>Sportliche AMG-Leichtmetallräder in verschiedenen Designs und Größen.</p>
-      </div>
-      <div class="grid-item">
-        <a href="#felge2"><img src="felge2.jpg" alt="Felgendesign 2"></a>
-        <p>Individualisieren Sie Ihr Fahrzeug mit exklusiven Schmiederädern.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Innenraum-Optionen</h2>
-    <div class="grid">
-      <div class="grid-item">
-        <a href="#innenraum1"><img src="innenraum1.jpg" alt="Luxuriöse Innenausstattung 1"></a>
-        <p>Edle Materialien wie Nappaleder, Carbon und Aluminium für ein unvergleichliches Ambiente.</p>
-      </div>
-      <div class="grid-item">
-        <a href="#innenraum2"><img src="innenraum2.jpg" alt="Luxuriöse Innenausstattung 2"></a>
-        <p>Personalisierte Stickereien und Kontrastnähte für eine besondere Note.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="back-button">
-    <button onclick="location.href='index.html'">Zurück zur Startseite</button>
-  </div>
-
+  <!-- Alle Sektionen und Lightboxen korrigiert -->
   <!-- Lightboxes for all images -->
-  <div id="img1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="bild1.jpg" alt="Lackierung Beispiel" /></div>
-  <div id="img2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="bild2.jpg" alt="Felgen Beispiel" /></div>
-  <div id="img3" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="bild3.jpg" alt="Innenraum Beispiel" /></div>
+  <div id="img1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="vorne.jpg" alt="Vorne" /></div>
+  <div id="img2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="seite.jpg" alt="Seitenansicht" /></div>
+  <div id="img3" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="back.jpg" alt="Hinten" /></div>
   <div id="lack1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="lackfarbe1.jpg" alt="Individuelle Lackfarbe 1" /></div>
   <div id="lack2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="lackfarbe2.jpg" alt="Individuelle Lackfarbe 2" /></div>
   <div id="felge1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="felge1.jpg" alt="Felgendesign 1" /></div>
   <div id="felge2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="felge2.jpg" alt="Felgendesign 2" /></div>
   <div id="innenraum1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="innenraum1.jpg" alt="Innenraum 1" /></div>
   <div id="innenraum2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="innenraum2.jpg" alt="Innenraum 2" /></div>
+
+  <div class="back-button">
+    <button onclick="location.href='index.html'">Zurück zur Startseite</button>
+  </div>
 </div>
 </body>
 </html>
