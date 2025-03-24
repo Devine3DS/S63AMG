@@ -89,13 +89,26 @@
         }
     </style>
     <script>
+        // Track the currently playing audio element
+        var currentAudio = null;
+
         function toggleAudio(audioId) {
             var audioElement = document.getElementById(audioId);
-            // Toggle visibility of the audio element
-            if (audioElement.style.display === "none" || audioElement.style.display === "") {
-                audioElement.style.display = "block";
+
+            // Stop the currently playing audio if it's not the one clicked
+            if (currentAudio && currentAudio !== audioElement) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0; // Reset the audio to start
+            }
+
+            // Play or stop the clicked audio
+            if (audioElement.paused) {
+                audioElement.play();
+                currentAudio = audioElement; // Set the current audio to the one playing
             } else {
-                audioElement.style.display = "none";
+                audioElement.pause();
+                audioElement.currentTime = 0; // Reset the audio to start
+                currentAudio = null; // Reset current audio if it's paused
             }
         }
     </script>
