@@ -136,7 +136,9 @@
 <script>
   document.addEventListener('keydown', function(e) {
     if (e.key === "Escape" || e.key === "Backspace") {
-      // Schließe das aktuelle Lightbox, ohne die Seite neu zu laden
+      // Verhindere das Zurücksetzen der Seite, während die Lightbox geschlossen wird
+      history.replaceState(null, null, window.location.pathname);
+      // Schließe die Lightbox ohne die Seite neu zu laden
       window.location.hash = "";
     }
   });
@@ -211,9 +213,9 @@
   </div>
 
   <!-- Lightboxes for all images -->
-  <div id="img1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="vorne.jpg" alt="Vorne" /></div>
-  <div id="img2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="seite.jpg" alt="Seite" /></div>
-  <div id="img3" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="back.jpg" alt="Hinten" /></div>
+  <div id="img1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="bild1.jpg" alt="Lackierung Beispiel" /></div>
+  <div id="img2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="bild2.jpg" alt="Felgen Beispiel" /></div>
+  <div id="img3" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="bild3.jpg" alt="Innenraum Beispiel" /></div>
   <div id="lack1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="lackfarbe1.jpg" alt="Individuelle Lackfarbe 1" /></div>
   <div id="lack2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="lackfarbe2.jpg" alt="Individuelle Lackfarbe 2" /></div>
   <div id="felge1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img class="lightbox-content" src="felge1.jpg" alt="Felgendesign 1" /></div>
