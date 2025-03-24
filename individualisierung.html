@@ -134,12 +134,18 @@
 </head>
 <body>
 <script>
+<script>
+  // Setze scrollRestoration auf "manual", um das automatische Scrollen zu verhindern
+  if (history.scrollRestoration) {
+    history.scrollRestoration = "manual";
+  }
+
   document.addEventListener('keydown', function(e) {
     if (e.key === "Escape" || e.key === "Backspace") {
-      // Speichern der aktuellen Scroll-Position, bevor der Hash entfernt wird
+      // Speichern der aktuellen Scroll-Position
       const scrollPosition = window.scrollY;
 
-      // Verhindert das Zurücksetzen der Seite auf den Anfang und entfernt nur den Hash
+      // Entferne den Hash ohne die Seite neu zu laden oder die Position zu verändern
       history.replaceState(null, null, window.location.pathname);
 
       // Schließe die Lightbox
@@ -150,7 +156,7 @@
     }
   });
 
-  // Verhindert das Scrollen der Seite beim Schließen der Lightbox
+  // Verhindere das Scrollen der Seite beim Schließen der Lightbox
   window.addEventListener("hashchange", function(event) {
     // Verhindert das automatische Scrollen der Seite auf den Anfang
     event.preventDefault();
