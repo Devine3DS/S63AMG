@@ -85,8 +85,20 @@
         audio {
             width: 100%;
             margin-top: 15px;
+            display: none; /* Initially hidden */
         }
     </style>
+    <script>
+        function toggleAudio(audioId) {
+            var audioElement = document.getElementById(audioId);
+            // Toggle visibility of the audio element
+            if (audioElement.style.display === "none" || audioElement.style.display === "") {
+                audioElement.style.display = "block";
+            } else {
+                audioElement.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -100,8 +112,9 @@
                     Dieser Motor zeichnet sich durch seine beeindruckende Kombination aus Leistung und Effizienz aus.
                     Dank Direkteinspritzung und Twin-Turbo-Technologie bietet der M157 ein sofortiges Ansprechverhalten und eine beeindruckende Beschleunigung.
                 </p>
-                <!-- Button to play audio -->
-                <a href="#audio1" class="audio-button">Motor Sound Anhören</a>
+                <!-- Button to toggle audio player -->
+                <a href="javascript:void(0);" class="audio-button" onclick="toggleAudio('audio1')">Motor Sound Anhören</a>
+                <!-- Audio Player initially hidden -->
                 <audio id="audio1" controls>
                     <source src="m157_sound.mp3" type="audio/mp3">
                     Ihr Browser unterstützt das Audio-Tag nicht.
@@ -118,8 +131,9 @@
                     Im Gegensatz zum M157 bietet der M279 ein noch souveräneres Fahrgefühl mit nahezu unerschöpflicher Kraftentfaltung.
                     Der handgefertigte V12 ist mit modernster Technik ausgestattet, um ein ultimatives Fahrerlebnis zu garantieren.
                 </p>
-                <!-- Button to play audio -->
-                <a href="#audio2" class="audio-button">Motor Sound Anhören</a>
+                <!-- Button to toggle audio player -->
+                <a href="javascript:void(0);" class="audio-button" onclick="toggleAudio('audio2')">Motor Sound Anhören</a>
+                <!-- Audio Player initially hidden -->
                 <audio id="audio2" controls>
                     <source src="m279_sound.mp3" type="audio/mp3">
                     Ihr Browser unterstützt das Audio-Tag nicht.
