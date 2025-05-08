@@ -1,3 +1,25 @@
+
+<style>
+.bild-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.hover-beschreibung {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+.bild-wrapper:hover .hover-beschreibung {
+  display: block;
+  z-index: 10;
+}
+</style>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -10,7 +32,7 @@
   <title>Individualisierung - Mercedes S63 und S65 AMG Coupé C217</title>
   <style>
     body {
-      font-family: 'Didot', sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       color: #fff;
@@ -100,15 +122,16 @@
       background: #e74c3c;
     }
   </style>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
   <section class="section">
     <h2>Individualisierungsmöglichkeiten</h2>
     <div class="intro-images">
-      <img src="vorne.webp" alt="Vorne" / loading="lazy">
-      <img src="seite.webp" alt="Seitenansicht" / loading="lazy">
-      <img src="back.webp" alt="Hinten" / loading="lazy">
+      <div class="bild-wrapper"><img title="Vorne" src="vorne.webp" alt="Vorne" / loading="lazy"><div class="hover-beschreibung">Vorne</div></div>
+      <div class="bild-wrapper"><img title="Seite" src="seite.webp" alt="Seite" / loading="lazy"><div class="hover-beschreibung">Seite</div></div>
+      <div class="bild-wrapper"><img title="Back" src="back.webp" alt="Back" / loading="lazy"><div class="hover-beschreibung">Back</div></div>
     </div>
     <p>
       Gestalten Sie Ihr Mercedes-AMG Coupé ganz nach Ihren Wünschen – von der Außenfarbe über die Felgen bis hin zur exklusiven Innenausstattung.
@@ -119,11 +142,11 @@
     <h2>Exklusive Lackfarben</h2>
     <div class="grid">
       <div class="grid-item">
-        <img src="lackfarbe1.webp" alt="Individuelle Lackfarbe 1" loading="lazy">
+        <div class="bild-wrapper"><img title="Lackfarbe1" src="lackfarbe1.webp" alt="Lackfarbe1" loading="lazy"><div class="hover-beschreibung">Lackfarbe1</div></div>
         <p>Einzigartige Metallic- und Mattlackierungen für einen unverwechselbaren Look.</p>
       </div>
       <div class="grid-item">
-        <img src="lackfarbe2.webp" alt="Individuelle Lackfarbe 2" loading="lazy">
+        <div class="bild-wrapper"><img title="Lackfarbe2" src="lackfarbe2.webp" alt="Lackfarbe2" loading="lazy"><div class="hover-beschreibung">Lackfarbe2</div></div>
         <p>Hochwertige Farbtöne, die perfekt zur AMG-Performance passen.</p>
       </div>
     </div>
@@ -133,11 +156,11 @@
     <h2>Felgendesigns</h2>
     <div class="grid">
       <div class="grid-item">
-        <img src="felge1.webp" alt="Felgendesign 1" loading="lazy">
+        <div class="bild-wrapper"><img title="Felge1" src="felge1.webp" alt="Felge1" loading="lazy"><div class="hover-beschreibung">Felge1</div></div>
         <p>Sportliche AMG-Leichtmetallräder in verschiedenen Designs und Größen.</p>
       </div>
       <div class="grid-item">
-        <img src="felge2.webp" alt="Felgendesign 2" loading="lazy">
+        <div class="bild-wrapper"><img title="Felge2" src="felge2.webp" alt="Felge2" loading="lazy"><div class="hover-beschreibung">Felge2</div></div>
         <p>Individualisieren Sie Ihr Fahrzeug mit exklusiven Schmiederädern.</p>
       </div>
     </div>
@@ -147,11 +170,11 @@
     <h2>Innenraum-Optionen</h2>
     <div class="grid">
       <div class="grid-item">
-        <img src="innenraum1.webp" alt="Luxuriöse Innenausstattung 1" loading="lazy">
+        <div class="bild-wrapper"><img title="Innenraum1" src="innenraum1.webp" alt="Innenraum1" loading="lazy"><div class="hover-beschreibung">Innenraum1</div></div>
         <p>Edle Materialien wie Nappaleder, Carbon und Aluminium für ein unvergleichliches Ambiente.</p>
       </div>
       <div class="grid-item">
-        <img src="innenraum2.webp" alt="Luxuriöse Innenausstattung 2" loading="lazy">
+        <div class="bild-wrapper"><img title="Innenraum2" src="innenraum2.webp" alt="Innenraum2" loading="lazy"><div class="hover-beschreibung">Innenraum2</div></div>
         <p>Personalisierte Stickereien und Kontrastnähte für eine besondere Note.</p>
       </div>
     </div>
