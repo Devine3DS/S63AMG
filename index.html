@@ -126,6 +126,13 @@
       display: block;
       z-index: 10;
     }
+    .responsive-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
     .back-button, .audio-button {
       display: block;
       width: 100%;
@@ -173,7 +180,7 @@
     <section id="willkommen" class="section">
       <h2>Willkommen</h2>
       <p>Erfahren Sie mehr über das luxuriöse Mercedes S63 und S65 AMG Coupé C217, seine leistungsstarken Motoren und umfangreichen Möglichkeiten zur Individualisierung.</p>
-      <div class="bild-wrapper"><img title="S63" src="S63.webp" alt="S63" loading="lazy"><div class="hover-beschreibung">S63</div></div>
+      <div class="bild-wrapper"><img class="responsive-img" title="S63" src="S63.webp" alt="S63" loading="lazy"><div class="hover-beschreibung">S63</div></div>
     </section>
     <section id="motoren" class="section">
       <h2>Motorenvielfalt</h2>
@@ -184,18 +191,4 @@
           <p>Der kraftvolle V8-Biturbo-Motor bietet eine beeindruckende Mischung aus Leistung und Effizienz.</p>
         </div>
         <div class="motoren-item">
-          <div class="bild-wrapper"><img title="M279" src="m279.webp" alt="M279" loading="lazy"><div class="hover-beschreibung">M279 V12-Motor</div></div>
-          <p>Der leistungsstarke V12-Motor sorgt für ein ultimatives Fahrerlebnis mit maximaler Power.</p>
-        </div>
-      </div>
-      <a href="motoren.html" class="back-button">Mehr über die Motoren</a>
-    </section>
-    <section id="ihr-amg-coupe" class="section">
-      <h2>Ihr AMG Coupé</h2>
-      <p>Gestalten Sie Ihr individuelles Traumfahrzeug mit einer breiten Auswahl an Farben, Innenausstattungen und Sonderausstattungen.</p>
-      <div class="bild-wrapper"><img title="Individuell" src="individuell.webp" alt="Individuell" loading="lazy"><div class="hover-beschreibung">Individuell</div></div>
-      <a href="individualisierung.html" class="back-button">Mehr über die Individualisierung</a>
-    </section>
-  </div>
-</body>
-</html>
+          <div class="bild-wrapper
