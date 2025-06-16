@@ -3,156 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Detaillierte Informationen über die Motoren des Mercedes S63/65 AMG Coupé C217">
-  <meta name="keywords" content="Mercedes, AMG, S-Coupe, M157, M279, Motor">
+  <meta name="description" content="Detaillierte Informationen zu den Motoren des Mercedes S63 &amp; S65 AMG Coupé C217">
+  <meta name="keywords" content="Mercedes, AMG, Motoren, S63, S65, M157, M279">
   <meta name="author" content="Jan Bruder">
-  <title>Motoren des Mercedes S63/65 AMG Coupé C217</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <title>Motorenvielfalt | Mercedes S63 &amp; S65 AMG Coupé C217</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #fff;
-      background-color: #121212;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 50px 0;
-    }
-    .section {
-      margin: 80px 0;
-      padding: 40px;
-      background: rgba(40, 40, 40, 0.9);
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
-      transition: transform 0.3s ease-in-out;
-      text-align: center;
-    }
-    .section:hover {
-      transform: scale(1.03);
-    }
-    .motoren-item {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .motoren-item img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    h2 {
-      border-bottom: 3px solid #d35400;
-      padding-bottom: 12px;
-      color: #d35400;
-    }
-    p {
-      line-height: 1.8;
-      font-size: 1.2rem;
-    }
-    .bild-wrapper {
-      position: relative;
-      display: inline-block;
-    }
-    .hover-beschreibung {
-      display: none;
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(0,0,0,0.7);
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-    }
-    .bild-wrapper:hover .hover-beschreibung {
-      display: block;
-      z-index: 10;
-    }
-    .audio-button, .back-button {
-      display: block;
-      width: 100%;
-      max-width: 220px;
-      margin: 30px auto;
-      padding: 15px;
-      text-align: center;
-      background: #d35400;
-      color: white;
-      font-size: 1.2rem;
-      border-radius: 5px;
-      transition: background 0.3s ease-in-out;
-      text-decoration: none;
-    }
-    .audio-button:hover, .back-button:hover {
-      background: #e74c3c;
-    }
-    audio {
-      width: 100%;
-      margin-top: 15px;
-    }
+    :root {--color-bg:#0D0D0D;--color-primary:#D35400;--color-secondary:#272727;--color-text:#EEEEEE;--transition:0.3s ease;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--color-text);background-color:var(--color-bg);}
+    .skip-link{position:absolute;top:-40px;left:0;background:var(--color-primary);color:#fff;padding:8px 16px;z-index:1001;transition:top var(--transition);} .skip-link:focus{top:0;}
+    header[role="banner"]{position:fixed;width:100%;top:0;background:var(--color-secondary);z-index:1000;}
+    .nav-container{max-width:1200px;margin:auto;display:flex;justify-content:center;padding:15px;}
+    nav[aria-label="Hauptnavigation"] ul{list-style:none;display:flex;gap:30px;}
+    nav a{color:var(--color-text);text-decoration:none;padding:8px 12px;transition:background var(--transition);border-radius:4px;position:relative;}
+    nav a:hover,nav a:focus{background:var(--color-primary);}
+    nav a.active::after{content:'';position:absolute;bottom:-4px;left:0;width:100%;height:4px;background:var(--color-primary);}
+    .landing{position:relative;margin-top:60px;height:50vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+    .landing img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+    .landing h1{position:relative;z-index:2;font-size:clamp(2rem,5vw,4rem);background:rgba(0,0,0,0.6);padding:12px 24px;border-radius:8px;text-align:center;}
+    main{padding:80px 20px;max-width:1200px;margin:auto;}
+    h2{font-size:2rem;margin-bottom:20px;color:var(--color-primary);position:relative;} h2::after{content:'';display:block;width:60px;height:4px;background:var(--color-primary);margin-top:8px;}
+    .motor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:50px;margin-top:40px;}
+    .motor-item{text-align:center;}
+    .motor-item img{max-width:400px;width:80%;height:auto;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.5);}
+    .motor-item p{margin-top:12px;font-size:1rem;}
+    .motor-item audio{margin-top:12px;width:80%;}
+    .btn-back{display:inline-block;margin-top:40px;background:var(--color-primary);color:#fff;padding:12px 28px;border:none;border-radius:6px;text-decoration:none;transition:background var(--transition);} .btn-back:hover,.btn-back:focus{background:#e74c3c;}
+    footer[role="contentinfo"]{background:var(--color-secondary);padding:40px 20px;color:var(--color-text);}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:1200px;margin:auto;}
+    .footer-grid h3{margin-bottom:12px;}
+    .footer-grid a{color:var(--color-text);text-decoration:none;display:block;margin-bottom:6px;transition:color var(--transition);}
+    .footer-grid a:hover,.footer-grid a:focus{color:var(--color-primary);}
+    @media(max-width:768px){.landing{height:30vh;}}
   </style>
-  <script>
-    var currentAudio = null;
-    function toggleAudio(audioId) {
-      var audioElement = document.getElementById(audioId);
-      if (currentAudio && currentAudio !== audioElement) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-      }
-      if (audioElement.paused) {
-        audioElement.play();
-        currentAudio = audioElement;
-      } else {
-        audioElement.pause();
-        audioElement.currentTime = 0;
-        currentAudio = null;
-      }
-    }
-  </script>
 </head>
 <body>
-  <div class="container">
-    <section class="section">
-      <h2>M157 - 5.5L V8 Biturbo</h2>
-      <div class="motoren-item">
-        <div class="bild-wrapper">
-          <img title="M157" src="m157.webp" alt="M157" loading="lazy">
-          <div class="hover-beschreibung">M157 V8-Motor des S63 AMGs</div>
-        </div>
-        <p>
-          Der M157 ist ein 5.5-Liter-V8-Biturbo-Motor, der zwischen 2010 und 2019 in verschiedenen AMG-Modellen verwendet wurde.
-          Im S63 AMG C217 leistet er bis zu 585 PS und 900 Nm Drehmoment.
-          Dieser Motor zeichnet sich durch seine beeindruckende Kombination aus Leistung und Effizienz aus.
-        </p>
-        <a href="javascript:void(0);" class="audio-button" onclick="toggleAudio('audio1')">Motor Sound Anhören</a>
-        <audio id="audio1" controls>
-          <source src="m157_sound.mp3" type="audio/mp3">
-          Ihr Browser unterstützt das Audio-Tag nicht.
-        </audio>
-      </div>
-    </section>
-    <section class="section">
-      <h2>M279 - 6.0L V12 Biturbo</h2>
-      <div class="motoren-item">
-        <div class="bild-wrapper">
-          <img title="M279" src="m279.webp" alt="M279" loading="lazy">
-          <div class="hover-beschreibung">M279 V12-Motor des S65 AMGs</div>
-        </div>
-        <p>
-          Der M279 ist ein 6.0-Liter-V12-Biturbo-Motor, der für absolute Leistung und Laufruhe entwickelt wurde.
-          Er kommt im S65 AMG C217 zum Einsatz und leistet bis zu 630 PS und 1.000 Nm Drehmoment.
-        </p>
-        <a href="javascript:void(0);" class="audio-button" onclick="toggleAudio('audio2')">Motor Sound Anhören</a>
-        <audio id="audio2" controls>
-          <source src="m279_sound.mp3" type="audio/mp3">
-          Ihr Browser unterstützt das Audio-Tag nicht.
-        </audio>
-      </div>
-    </section>
-    <a href="index.html" class="back-button">Zurück zur Startseite</a>
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+  <header role="banner">
+    <div class="nav-container">
+      <nav aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html#willkommen" data-id="willkommen">Willkommen</a></li>
+          <li><a href="index.html#motoren" class="active" data-id="motoren">Motoren</a></li>
+          <li><a href="index.html#individualisierung" data-id="individualisierung">Individualisierung</a></li>
+          <li><a href="kontakt.html" data-id="kontakt">Kontakt</a></li>
+          <li><a href="faq.html" data-id="faq">FAQ</a></li>
+          <li><a href="impressum.html" data-id="impressum">Impressum</a></li>
+          <li><a href="datenschutz.html" data-id="datenschutz">Datenschutz</a></li>
+          <li><a href="agb.html" data-id="agb">AGB</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="landing">
+    <img src="Background.webp" alt="Nahaufnahme AMG Motorhaube" />
+    <h1>Motorenvielfalt</h1>
   </div>
+  <main id="main">
+    <section>
+      <h2>V8-Biturbo (M157)</h2>
+      <div class="motor-item">
+        <img src="m157.webp" alt="AMG M157 V8-Biturbo Motor" title="AMG M157 V8-Biturbo Motor" loading="lazy">
+        <p>Der M157 5.5L V8-Biturbo leistet bis zu 585 PS und 900 Nm Drehmoment für dynamische Performance.</p>
+        <audio controls>
+          <source src="m157_sound.mp3" type="audio/mpeg">
+          Ihr Browser unterstützt das Audio-Element nicht.
+        </audio>
+      </div>
+    </section>
+    <section>
+      <h2>V12-Biturbo (M279)</h2>
+      <div class="motor-item">
+        <img src="m279.webp" alt="AMG M279 V12-Biturbo Motor" title="AMG M279 V12-Biturbo Motor" loading="lazy">
+        <p>Der M279 6.0L V12-Biturbo bietet bis zu 630 PS und 1.000 Nm Drehmoment für ultimative Power.</p>
+        <audio controls>
+          <source src="m279_sound.mp3" type="audio/mpeg">
+          Ihr Browser unterstützt das Audio-Element nicht.
+        </audio>
+      </div>
+    </section>
+    <a href="index.html" class="btn-back">Zurück zur Startseite</a>
+  </main>
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <h3>Rechtliches</h3>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+      </div>
+      <div>
+        <h3>Service</h3>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <h3>Folgen Sie uns</h3>
+        <a href="https://www.facebook.com/Mercedes" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/Mercedes" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/Mercedes" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => link.addEventListener('click', () => { links.forEach(l => l.classList.remove('active')); link.classList.add('active'); }));
+    const currentId = 'motoren';
+    const active = document.querySelector(`nav a[data-id="${currentId}"]`);
+    if(active) active.classList.add('active');
+  </script>
 </body>
 </html>

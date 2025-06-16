@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Informationen und Individualisierung zu Mercedes S63 &amp; S65 AMG Coupé C217">
+  <meta name="description" content="Kontaktinformationen Mercedes-Benz AG">
   <meta name="keywords" content="Mercedes, AMG, S-Coupé, S63, S65, Individualisierung, Impressionen">
   <meta name="author" content="Jan Bruder">
-  <title>Mercedes S63 &amp; S65 AMG Coupé C217</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+  <title>Kontakt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root { --color-bg: #0D0D0D; --color-primary: #D35400; --color-secondary: #272727; --color-text: #EEEEEE; --transition: 0.3s ease; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,11 +17,11 @@
     .skip-link:focus { top: 0; }
     header[role="banner"] { position: fixed; width: 100%; top: 0; background: var(--color-secondary); z-index: 1000; }
     .nav-container { max-width: 1200px; margin: auto; display: flex; justify-content: center; padding: 15px; }
-    nav[aria-label="Hauptnavigation"] ul { list-style: none; display: flex; gap: 30px; }
+    nav[aria-label="Hauptnavigation"] ul { list-style: none; display: flex; gap: 30px; position: relative; }
     nav a { color: var(--color-text); text-decoration: none; padding: 8px 12px; transition: background var(--transition); border-radius: 4px; position: relative; }
     nav a:hover, nav a:focus { background: var(--color-primary); }
     nav a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 4px; background: var(--color-primary); }
-    .landing { position: relative; margin-top: 60px; height: calc(100vh - 60px); display: flex; align-items: flex-start; justify-content: center; padding-top: 100px; overflow: hidden; }
+    .landing { position: relative; margin-top: 60px; height: calc(100vh - 60px); display: flex; align-items: flex-start; justify-content: center; padding-top: 120px; overflow: hidden; }
     .landing img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
     .landing h1 { position: relative; z-index: 2; font-size: clamp(2rem, 5vw, 4rem); background: rgba(0,0,0,0.6); padding: 12px 24px; border-radius: 8px; color: var(--color-text); text-align: center; }
     section { padding: 80px 20px; }
@@ -30,9 +30,6 @@
     h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--color-primary); margin-top: 8px; }
     p { margin-bottom: 20px; font-size: 1rem; }
     .responsive-img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
-    .motor-item .responsive-img { width: 500px; height: 300px; object-fit: contain; }
-    .motor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px,1fr)); gap: 50px; margin-top: 30px; justify-items: center; }
-    .motor-item p { text-align: center; margin-top: 12px; }
     .btn { display: inline-block; background: var(--color-primary); color: #fff; padding: 12px 28px; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; transition: background var(--transition); text-decoration: none; }
     .btn:hover, .btn:focus { background: #e74c3c; }
     footer[role="contentinfo"] { background: var(--color-secondary); padding: 40px 20px; color: var(--color-text); }
@@ -40,18 +37,18 @@
     .footer-grid h3 { margin-bottom: 12px; }
     .footer-grid a { color: var(--color-text); text-decoration: none; display: block; margin-bottom: 6px; transition: color var(--transition); }
     .footer-grid a:hover, .footer-grid a:focus { color: var(--color-primary); }
-    @media (max-width: 768px) { .nav-container { padding: 10px; } .landing { padding-top: 60px; height: calc(100vh - 60px); } .motor-item .responsive-img { width: 100%; height: auto; } }
+    @media(max-width:768px) { .nav-container { padding: 10px; } .landing { padding-top: 80px; height: calc(100vh - 60px); } }
   </style>
 </head>
 <body>
-  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+  <a href="index.html#main" class="skip-link">Zum Inhalt springen</a>
   <header role="banner">
     <div class="nav-container">
       <nav aria-label="Hauptnavigation">
         <ul>
-          <li><a href="#willkommen" data-id="willkommen" class="active">Willkommen</a></li>
-          <li><a href="#motoren" data-id="motoren">Motoren</a></li>
-          <li><a href="#individualisierung" data-id="individualisierung">Individualisierung</a></li>
+          <li><a href="index.html#willkommen" data-id="willkommen">Willkommen</a></li>
+          <li><a href="index.html#motoren" data-id="motoren">Motoren</a></li>
+          <li><a href="index.html#individualisierung" data-id="individualisierung">Individualisierung</a></li>
           <li><a href="kontakt.html" data-id="kontakt">Kontakt</a></li>
           <li><a href="faq.html" data-id="faq">FAQ</a></li>
           <li><a href="impressum.html" data-id="impressum">Impressum</a></li>
@@ -62,40 +59,11 @@
     </div>
   </header>
   <div class="landing">
-    <img src="Background.webp" alt="Frontansicht des weißen Mercedes S63 &amp; S65 AMG Coupé C217" class="landing-img">
-    <h1>Mercedes S63 &amp; S65 AMG Coupé C217</h1>
+    <img src="Background.webp" alt="Frontansicht des weißen Mercedes S63 & S65 AMG Coupé C217" class="landing-img">
+    <h1>Kontakt</h1>
   </div>
-  <main id="main" class="container" role="main">
-    <section id="willkommen">
-      <h2>Willkommen</h2>
-      <p>Erleben Sie die Faszination von Luxus und Performance im Mercedes S63 &amp; S65 AMG Coupé C217. Entdecken Sie kraftvolle Motoren, edle Materialien und modernste Technik.</p>
-      <img class="responsive-img" src="S63.webp" alt="S63 AMG in Weiß mit Panamerica Grill" title="S63 AMG in Weiß mit Panamerica Grill">
-    </section>
-    <section id="motoren">
-      <h2>Motorenvielfalt</h2>
-      <p>Unsere AMG Modelle bieten Ihnen die Wahl zwischen kraftvollem V8-Biturbo und dominierendem V12-Aggregat. Spüren Sie die geballte Leistung auf jeder Fahrt.</p>
-      <div class="motor-grid">
-        <div class="motor-item">
-          <img class="responsive-img" src="m157.webp" alt="AMG M157 V8-Biturbo Motor" title="AMG M157 V8-Biturbo Motor">
-          <p>V8-Biturbo (M157): Dynamische Performance trifft Effizienz.</p>
-        </div>
-        <div class="motor-item">
-          <img class="responsive-img" src="m279.webp" alt="AMG M279 V12-Biturbo Motor" title="AMG M279 V12-Biturbo Motor">
-          <p>V12-Biturbo (M279): Ultimative Power und unvergleichlicher Sound.</p>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:20px;">
-        <a href="motoren.html" class="btn">Mehr erfahren</a>
-      </div>
-    </section>
-    <section id="individualisierung">
-      <h2>Individualisierung</h2>
-      <p>Gestalten Sie Ihr Traumfahrzeug nach Ihren Wünschen: Lackfarben, Polster, Zierteile und vieles mehr.</p>
-      <img class="responsive-img" src="individuell.webp" alt="Übersicht der Individualisierungsmöglichkeiten" title="Übersicht der Individualisierungsmöglichkeiten">
-      <div style="text-align:center;margin-top:20px;">
-        <a href="individualisierung.html" class="btn">Zur Konfiguration</a>
-      </div>
-    </section>
+  <main class="container" role="main">
+    <h2>Kontakt</h2><p>Haben Sie Fragen oder Wünsche?<br>Email: <a href="mailto:info@mercedes-amg.de">info@mercedes-amg.de</a><br>Telefon: <a href="tel:+491234567890">+49 123 456 7890</a></p>
   </main>
   <footer role="contentinfo">
     <div class="footer-grid">
@@ -110,11 +78,9 @@
       links.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
     }));
-    const hash = window.location.hash.substring(1);
-    if (hash) {
-      const active = document.querySelector(`nav a[data-id="${hash}"]`);
-      if (active) active.classList.add('active');
-    }
+    const currentId = 'kontakt';
+    const active = document.querySelector(`nav a[data-id="${currentId}"]`);
+    if (active) active.classList.add('active');
   </script>
 </body>
 </html>
