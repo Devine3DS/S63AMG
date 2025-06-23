@@ -15,7 +15,7 @@
   --color-primary: #D35400;
   --color-secondary: #272727;
   --color-text: #EEEEEE;
-  --transition: 0.3s ease;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -87,7 +87,7 @@ nav a.active::after {
   position: relative;
   margin-top: 60px;
   height: 40vh;
-  min-height: 220px;
+  min-height: 200px;
   max-height: 420px;
   display: flex;
   align-items: center;
@@ -99,7 +99,8 @@ nav a.active::after {
   top: 0; left: 0; width: 100vw; height: 100%;
   object-fit: cover;
   z-index: 1;
-  min-height: 220px;
+  min-height: 180px;
+  max-height: 100%;
 }
 .landing h1 {
   position: relative; z-index: 2;
@@ -130,23 +131,46 @@ h2::after {
   background: var(--color-primary);
   margin-top: 8px;
 }
-.motor-grid {
+img, .responsive-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.30);
+  transition: box-shadow 0.22s cubic-bezier(.4,0,.2,1), filter 0.22s cubic-bezier(.4,0,.2,1);
+}
+img:hover:not(.landing-img), .responsive-img:hover:not(.landing-img),
+.motor-item img:hover, .motor-grid img:hover, .intro-images img:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 6px 14px 0 rgba(211,84,0,0.13);
+  z-index: 2;
+}
+.landing img,
+.landing-img,
+.landing img:hover {
+  filter: none !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.30) !important;
+  transition: none !important;
+}
+.motor-item img, .motor-grid img, .intro-images img {
+  max-width: 500px;
+  width: 100%;
+}
+.grid, .intro-images {
   display: flex;
   flex-wrap: wrap;
+  gap: 24px;
   justify-content: center;
-  gap: 28px;
-  max-width: 100vw;
-  margin: 0 auto;
 }
-.motor-item img, .motor-grid img {
-  max-width: 260px;
-  width: 95vw;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+.grid > div, .intro-images > div {
+  flex: 1 1 260px;
+  max-width: 380px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .caption {
   margin-top: 8px;
@@ -202,6 +226,8 @@ footer, footer[role="contentinfo"] {
   .landing{height:26vh;min-height:110px;}
   .landing img{min-height:110px;}
   h2{font-size:1.3rem;}
+  .motor-item img, .motor-grid img, .intro-images img { max-width: 95vw;}
+  .grid, .intro-images { gap: 12px; }
 }
 @media (max-width: 700px) {
   nav ul {
@@ -219,8 +245,10 @@ footer, footer[role="contentinfo"] {
     height: 19vh;
     max-height: 155px;
   }
-  .motor-item img, .motor-grid img { width: 93vw; max-width: 240px;}
+  .motor-item img, .motor-grid img, .intro-images img { width: 93vw; max-width: 240px;}
   main {padding:55px 0 24px 0;}
+  .grid, .intro-images { flex-direction: column; gap: 8px;}
+  .grid > div, .intro-images > div {max-width:100%;}
 }
 @media (max-width:430px){
   .landing{margin-top:38px;max-height: 90px;}
@@ -248,7 +276,7 @@ footer, footer[role="contentinfo"] {
     </div>
   </header>
   <div class="landing">
-    <img src="Background.webp" alt="Nahaufnahme AMG Motorhaube" />
+    <img src="Background.webp" alt="Nahaufnahme AMG Motorhaube" / class="landing-img">
     <h1>Motorenvielfalt</h1>
   </div>
   <main id="main">
