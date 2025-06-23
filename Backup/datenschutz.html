@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Allgemeine Geschäftsbedingungen Mercedes-Benz AG">
+  <meta name="description" content="Datenschutzinformationen Mercedes-Benz AG">
   <meta name="keywords" content="Mercedes, AMG, S-Coupé, S63, S65, Individualisierung, Impressionen">
   <meta name="author" content="Jan Bruder">
-  <title>AGB</title>
+  <title>Datenschutz</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root { --color-bg: #0D0D0D; --color-primary: #D35400; --color-secondary: #272727; --color-text: #EEEEEE; --transition: 0.3s ease; }
@@ -38,29 +38,7 @@
     .footer-grid a { color: var(--color-text); text-decoration: none; display: block; margin-bottom: 6px; transition: color var(--transition); }
     .footer-grid a:hover, .footer-grid a:focus { color: var(--color-primary); }
     @media(max-width:768px) { .nav-container { padding: 10px; } .landing { padding-top: 80px; height: calc(100vh - 60px); } }
-  
-.motor-item img, .motor-grid img {
-  max-width: 280px;
-  width: 90vw;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  object-fit: contain;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-@media (max-width: 600px) {
-  nav ul {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  nav li {
-    flex: 1 1 40%;
-    min-width: 110px;
-    text-align: center;
-  }
-}
-</style>
+  </style>
 </head>
 <body>
   <a href="index.html#main" class="skip-link">Zum Inhalt springen</a>
@@ -82,23 +60,16 @@
   </header>
   <div class="landing">
     <img src="Background.webp" alt="Frontansicht des weißen Mercedes S63 & S65 AMG Coupé C217" class="landing-img">
-    <h1>AGB</h1>
+    <h1>Datenschutz</h1>
   </div>
   <main class="container" role="main">
-    <h2>AGB</h2><p>Unsere Allgemeinen Geschäftsbedingungen können Sie <a href="agb.pdf">hier herunterladen</a>.</p>
+    <h2>Datenschutz</h2><p>Informationen zum Datenschutz finden Sie in unserer <a href="datenschutzerklaerung.pdf">Datenschutzerklärung</a>.</p>
   </main>
   <footer role="contentinfo">
     <div class="footer-grid">
       <div><h3>Rechtliches</h3><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></div>
       <div><h3>Service</h3><a href="kontakt.html">Kontakt</a><a href="faq.html">FAQ</a></div>
-      <div>
-<div>
-  <h3>Folgen Sie uns</h3>
-  <a href="https://www.facebook.com/mercedesbenzdeutschland" target="_blank">Facebook</a>
-  <a href="https://www.instagram.com/mercedesbenz_de" target="_blank">Instagram</a>
-  <a href="https://www.youtube.com/user/mercedesbenz" target="_blank">YouTube</a>
-</div>
-
+      <div><h3>Folgen Sie uns</h3><a href="https://facebook.com/Mercedes">Facebook</a><a href="https://instagram.com/Mercedes">Instagram</a><a href="https://youtube.com/Mercedes">YouTube</a></div>
     </div>
   </footer>
   <script>
@@ -107,7 +78,7 @@
       links.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
     }));
-    const currentId = 'agb';
+    const currentId = 'datenschutz';
     const active = document.querySelector(`nav a[data-id="${currentId}"]`);
     if (active) active.classList.add('active');
   </script>
